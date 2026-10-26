@@ -1,0 +1,56 @@
+<!--BARRA PRINCIPAL (NAVBAR)-->
+<nav class="w-full bg-white border-b border-slate-100">
+
+    <div class="max-w-9xl mx-auto px-6 h-16 flex items-center justify-between">
+
+        <!-- Logo -->
+
+        <div class="flex items-center gap-2">
+            <div class="w-5 h-5 bg-emerald-500 rounded-sm"></div>
+
+            <span class="text-4xl font-bold text-slate-900">
+                CulturaFit
+            </span>
+        </div>
+
+
+        <!-- Navegación -->
+
+        <div class="hidden md:flex items-center gap-8">
+
+            <a routerLink="/"
+                class="bg-slate-200 rounded-full px-3 py-1 text-sm text-slate-600 hover:bg-emerald-100 transition-colors cursor-pointer">
+                Inicio</a>
+
+            <a routerLink="/planes-precios"
+                class="bg-slate-200 rounded-full px-3 py-1 text-sm text-slate-600 hover:bg-emerald-100 transition-colors cursor-pointer">
+                Planes & Precios</a>
+
+            <a routerLink="/mi-entrenador"
+                class="bg-slate-200 rounded-full px-3 py-1 text-sm text-slate-600 hover:bg-emerald-100 transition-colors cursor-pointer">
+                Mi Entrenador</a>
+
+        </div>
+
+
+        <!-- Acciones -->
+        <div class="flex items-center gap-3">
+
+            <button
+                class="hidden sm:block px-3 py-1.5 rounded-full bg-slate-200 text-[10px] font-semibold text-slate-500 hover:bg-emerald-100">
+                AGENDA UNA CITA
+            </button>
+
+            <button
+                class="px-5 py-2 rounded-full bg-emerald-500 text-white text-sm font-medium hover:bg-emerald-600 transition-colors">
+                Registrarse
+            </button>
+
+            <button class="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center hover:bg-slate-400">
+                👤
+            </button>
+
+        </div>
+
+    </div>
+</nav>

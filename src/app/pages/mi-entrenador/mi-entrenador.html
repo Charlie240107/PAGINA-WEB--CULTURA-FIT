@@ -1,0 +1,945 @@
+<app-navbar></app-navbar>
+
+<main class="min-h-screen bg-slate-50 px-3 py-6 md:px-6">
+
+    <!--FONDO DIFUSO VERDE -->
+    <section class="mx-auto max-w-5xl text-center">
+        <div class="pointer-events-none absolute -left-30 h-70 w-70 rounded-full opacity-40 blur-3xl"
+            style="background: radial-gradient(circle at top left, rgba(0,230,118,1) 0%, rgba(0,0,0,0) 70%);">
+        </div>
+    </section>
+
+    <!--CARTA DE PRESENTACIÓN -->
+    <section class="mx-auto max-w-7xl rounded-2xl border border-slate-100 bg-white p-5 shadow-lg md:p-8">
+
+        <div class="grid grid-cols-1 items-center gap-6 md:grid-cols-[280px_1fr] md:gap-8">
+
+            <!-- Fotografía -->
+            <div class="overflow-hidden rounded-2xl border border-slate-200 shadow-md">
+                <img src="/PERFIL.jpeg" alt="Fotografía de la entrenadora" class="h-64 w-full object-cover md:h-80">
+            </div>
+
+            <!-- INFORMACIÓN-->
+            <div class="min-w-0">
+
+                <div class="mb-3 flex flex-wrap items-center gap-2">
+                    <span class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+                        PERFIL OFICIAL
+                    </span>
+
+                    <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700">
+                        Especialista del Plan Plus
+                    </span>
+                </div>
+
+                <div class="flex items-center gap-2 text-2xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                    <span>Kinesiólogo Emmanuel Monreal</span>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="shrink-0">
+                        <path
+                            d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                        </path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                </div>
+
+                <p class="mt-2 text-sm font-bold text-emerald-700 md:text-base">
+                    Especialista en Hipertrofia, Biomecánica y Recomposición Corporal
+                </p>
+
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                    Acreditada por NSCA-CPT, CSCS y la Sociedad Internacional de Nutrición
+                    Deportiva (ISSN). Con un enfoque basado en evidencia científica,
+                    el diseño de entrenamientos y la mejora progresiva del rendimiento.
+                </p>
+
+                <!--ESTADISTICAS-->
+                <div class="mt-5 grid grid-cols-2 gap-3 rounded-xl bg-indigo-50 p-4 md:grid-cols-4">
+
+                    <div>
+                        <p class="text-xl font-bold text-slate-900">+8 Años</p>
+                        <p class="mt-1 text-xs text-slate-500">Experiencia</p>
+                    </div>
+
+                    <div>
+                        <p class="text-xl font-bold text-slate-900">+350</p>
+                        <p class="mt-1 text-xs text-slate-500">Atletas asesorados</p>
+                    </div>
+
+                    <div>
+                        <p class="text-xl font-bold text-slate-900">4.95 <span class="text-amber-500">★</span></p>
+                        <p class="mt-1 text-xs text-slate-500">Valoración</p>
+                    </div>
+
+                    <div>
+                        <p class="text-xl font-bold text-emerald-600">&lt;5 min</p>
+                        <p class="mt-1 text-xs text-slate-500">Respuesta en chat</p>
+                    </div>
+
+                </div>
+
+                <!--BOTONES-->
+                <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+
+                    <a href="/planes-precios"
+                        class="inline-flex items-center justify-center rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-600 gap-2">
+                        <svg class="text-white shrink-0" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="8" y1="14" x2="8.01" y2="14"></line>
+                            <line x1="12" y1="14" x2="12.01" y2="14"></line>
+                            <line x1="16" y1="14" x2="16.01" y2="14"></line>
+                            <line x1="8" y1="18" x2="8.01" y2="18"></line>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            <line x1="16" y1="18" x2="16.01" y2="18"></line>
+                        </svg>
+                        Contactar a Emmanuel · Agendar Asesoría
+                    </a>
+
+                    <a href="#metodologia"
+                        class="inline-flex items-center justify-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-700 gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2">
+                            <circle cx="12" cy="7" r="4"></circle>
+                            <path d="M 5 21 C 5 15, 8 13, 12 13 C 16 13, 19 15, 19 21"></path>
+                        </svg>
+                        Conocer su Metodología
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!--RESULTADOS DEL ENTRENADOR -->
+    <section class="mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-[1.4fr_1fr]">
+
+        <!--COLUMNA DE LA IZQUIERDA -->
+        <div>
+
+            <div class="mb-6">
+                <p
+                    class="items-center gap-2 text-xs font-semibold uppercase tracking-widest text-emerald-600 rounded-full bg-emerald-100 inline-flex px-3 py-1.5">
+                    <span class="bg-emerald-500"></span>
+                    Filosofía y enfoque
+                </p>
+
+                <h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                    Fuerza basada en ciencia, sin modas ni lesiones absurdas.
+                </h2>
+            </div>
+
+            <!--CITA DESTACADA-->
+            <blockquote class="rounded-2xl bg-blue-100 p-5 md:p-6">
+                <p class="text-sm italic leading-6 text-slate-700">
+                    “El entrenamiento debe adaptarse a tu vida, no al revés.
+                    Mi objetivo es ayudarte a progresar con criterio, constancia
+                    y una planificación adecuada.”
+                </p>
+
+                <footer class="mt-4 text-xs font-semibold text-emerald-700">
+                    — Emmanuel Monreal.
+                </footer>
+            </blockquote>
+
+            <!--DESCRIPCIÓN-->
+            <div class="mt-6 space-y-4 text-sm leading-7 text-slate-600 text-justify">
+                <p>
+                    Durante los últimos 5 años como entrenador personal, he tenido el privilegio de acompañar a cientos
+                    de personas en su camino hacia una vida más fuerte, sana y disciplinada. A lo largo de este tiempo,
+                    he aprendido que el verdadero entrenamiento va mucho más allá de levantar pesas o contar
+                    repeticiones; se trata de romper barreras mentales, construir hábitos sólidos y adaptar cada paso a
+                    la realidad de cada individuo.
+                </p>
+
+                <p>
+                    He trabajado con perfiles de todo tipo: desde atletas que buscan optimizar su rendimiento al máximo,
+                    hasta personas que nunca habían pisado un gimnasio y necesitaban recuperar su movilidad o confianza.
+                    Mi enfoque no se basa en modas pasajeras ni soluciones mágicas, sino en la ciencia del movimiento,
+                    la constancia inteligente y, sobre todo, en disfrutar el proceso para que los resultados sean
+                    sostenibles a largo plazo.
+                </p>
+            </div>
+
+            <!--TARJETAS DE BENEFICIOS-->
+            <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+
+                <article class="rounded-xl border border-slate-100 bg-white p-4 shadow-sm">
+                    <div
+                        class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-100 text-emerald-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none"
+                            stroke="#22C55E" stroke-width="2">
+                            <path d="M2 12h3l2.5 -5l4 10l3.5 -12l3 9h4" />
+                        </svg>
+                    </div>
+
+                    <h3 class="text-[18px] font-bold text-slate-800">
+                        Telemetría activa
+                    </h3>
+
+                    <p class="mt-2 text-[13px] leading-5 text-slate-500">
+                        Seguimiento de las métricas disponibles para observar tu evolución.
+                    </p>
+                </article>
+
+                <article class="rounded-xl border border-slate-100 bg-white p-4 shadow-sm">
+                    <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-100 text-cyan-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none"
+                            stroke="#22C55E" stroke-width="2">
+                            <circle cx="12" cy="5" r="2.5" />
+                            <path d="M4 8l8 3 8-3" />
+                            <path d="M12 11v4" />
+                            <path d="M12 15l-4 6" />
+                            <path d="M12 15l4 6" />
+                        </svg>
+                    </div>
+
+                    <h3 class="text-[18px]  font-bold text-slate-800">
+                        Salud articular
+                    </h3>
+
+                    <p class="mt-2 text-[13px] leading-5 text-slate-500">
+                        Atención a la técnica, la movilidad y la progresión de cargas.
+                    </p>
+                </article>
+
+                <article class="rounded-xl border border-slate-100 bg-white p-4 shadow-sm">
+                    <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-100 text-indigo-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none"
+                            stroke="#22C55E" stroke-width="2">
+                            <path d="M9 18h6" />
+                            <path d="M10 21h4" />
+                            <path
+                                d="M12 3a7 7 0 0 0 -5.5 11.3a3.5 3.5 0 0 1 .5 2.7h10a3.5 3.5 0 0 1 .5 -2.7a7 7 0 0 0 -5.5 -11.3z" />
+
+                            <path d="M10 13l2 -2l2 2" />
+                        </svg>
+                    </div>
+
+                    <h3 class="text-[18px]  font-bold text-slate-800">
+                        Hábitos reales
+                    </h3>
+
+                    <p class="mt-2 text-[13px] leading-5 text-slate-500">
+                        Estrategias para mantener una rutina sostenible a largo plazo.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+        <!-- COLUMNA DE LA DERECHA -->
+        <div class="space-y-5">
+
+            <!--GRAFICA-->
+            <article class="rounded-2xl bg-slate-800 p-5 text-white shadow-lg">
+
+                <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500">
+                        </span>
+                        <p class="text-xs font-semibold uppercase tracking-wider text-slate-300">
+                            Tablero de seguimiento
+                        </p>
+                    </div>
+                    <span class="rounded-full bg-emerald-900 px-3 py-1 text-xs text-emerald-300">
+                        Telemetría en vivo
+                    </span>
+                </div>
+
+                <div class="border border-slate-500 mt-2"></div>
+
+                <div class="mt-6">
+                    <p class="text-xs text-slate-400">
+                        Índice de Fatiga/Sobrecarga
+                    </p>
+
+                    <p class="mt-2 text-2xl font-bold text-emerald-400">
+                        Óptimo (1.8)
+                    </p>
+
+                    <!--GRAFICA ILUSTRATIVA-->
+                    <div class="mt-4 flex h-20 items-end gap-1 border-b border-slate-600">
+                        <span class="h-5 flex-1 rounded-t bg-emerald-800"></span>
+                        <span class="h-7 flex-1 rounded-t bg-emerald-700"></span>
+                        <span class="h-6 flex-1 rounded-t bg-emerald-800"></span>
+                        <span class="h-10 flex-1 rounded-t bg-emerald-600"></span>
+                        <span class="h-9 flex-1 rounded-t bg-emerald-700"></span>
+                        <span class="h-12 flex-1 rounded-t bg-emerald-500"></span>
+                        <span class="h-14 flex-1 rounded-t bg-emerald-400"></span>
+                    </div>
+                </div>
+
+                <div class="mt-5 grid grid-cols-2 gap-3">
+
+                    <div class="rounded-lg bg-slate-700 p-3">
+                        <p class="text-xs text-slate-300">Revisiones de Video</p>
+                        <p class="mt-2 text-xl font-bold">100%</p>
+                        <p class="mt-1 text-xs text-emerald-300 font-semibold">Con correción en tiempo y forma</p>
+                    </div>
+
+                    <div class="rounded-lg bg-slate-700 p-3">
+                        <p class="text-xs text-slate-300">Tasa de Mejora</p>
+                        <p class="mt-2 text-xl font-bold">94.2%</p>
+                        <p class="mt-1 text-xs text-emerald-300 font-semibold">Dato ilustrativo</p>
+                    </div>
+
+                </div>
+
+                <div class="mt-4 rounded-lg bg-slate-700 p-3 text-md leading-5 text-slate-300 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32">
+                        <path fill="#00E676" d="M3 6v20h9.586L16 29.414L19.414 26H29V6zm2 2h22v16h-8.414L16 
+                            26.586L13.414 24H5zm4 3v2h14v-2zm0 4v2h14v-2zm0 4v2h10v-2z" />
+                    </svg>
+                    "Tu último set de sentadilla búlgara estuvo impecable. Ajusté la cadencia para la sesión de la
+                    mañana."
+                </div>
+
+            </article>
+
+            <!--CERTIFICACIONES-->
+            <article class="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
+
+                <h3 class="text-base font-bold text-slate-900 flex items-center gap-3">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676" stroke-width="2">
+                        <path
+                            d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                        </path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    <span>Certificaciones y acreditaciones</span>
+                </h3>
+
+                <ul class="mt-5 space-y-4">
+
+                    <li class="flex items-start gap-3">
+                        <svg class="shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="#00E676" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <polygon points="12,16 7,10 10,10 10,7 14,7 14,10 17,10" fill="#00E676" stroke="none">
+                            </polygon>
+                        </svg>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800">
+                                Certificaciones profesionales
+                            </h4>
+                            <p class="mt-0.5 text-xs leading-5 text-slate-500">
+                                Añade aquí las acreditaciones verificadas de la entrenadora.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <svg class="shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24" fill="none" stroke="#00E676" stroke-width="2">
+                            <circle cx="12" cy="7" r="4"></circle>
+                            <path d="M 5 21 C 5 15, 8 13, 12 13 C 16 13, 19 15, 19 21"></path>
+                        </svg>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800">
+                                Biomecánica y postura
+                            </h4>
+                            <p class="mt-0.5 text-xs leading-5 text-slate-500">
+                                Información sobre su formación y experiencia en esta área.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <svg class="shrink-0 mt-0.5" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="#00E676" stroke-width="2">
+                            <path d="M6 2v6a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V2"></path>
+                            <path d="M8 10v12"></path>
+                            <path d="M16 2v20"></path>
+                            <path d="M16 2c3 0 4 3 4 7v3h-4"></path>
+                        </svg>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800">
+                                Nutrición deportiva
+                            </h4>
+                            <p class="mt-0.5 text-xs leading-5 text-slate-500">
+                                Incluye únicamente las credenciales que pueda acreditar.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <svg class="shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                            viewBox="0 0 24 24">
+                            <path fill="#00E676"
+                                d="M15.815 2.296c.692-.689 1.646-1.116 2.7-1.116s2.009.426 2.7 1.116l.492.492c.689.692 1.116 1.646 1.116 2.7s-.426 2.009-1.116 2.7l-2.137 2.137l.838.839l2.138-2.138c.904-.905 1.464-2.155 1.464-3.536s-.559-2.631-1.464-3.536l-.492-.492c-.905-.905-2.155-1.464-3.536-1.464s-2.631.56-3.536 1.464L12.844 3.6l.838.839zm-5.482 17.268l-2.138 2.138c-.692.69-1.646 1.116-2.7 1.116s-2.009-.426-2.7-1.116l-.492-.491c-.689-.692-1.115-1.646-1.115-2.7s.426-2.008 1.116-2.701l2.137-2.137l-.838-.839l-2.138 2.138C.56 15.877.001 17.127.001 18.508s.56 2.631 1.464 3.536l.492.491C2.862 23.44 4.112 24 5.493 24s2.631-.56 3.536-1.465l2.138-2.138zm12.213-4.592L9.039 1.465C8.134.56 6.884 0 5.503 0S2.872.56 1.967 1.465l-.492.491C.57 2.861.011 4.111.011 5.492s.56 2.631 1.464 3.536l13.507 13.506c.905.905 2.155 1.465 3.536 1.465s2.631-.56 3.536-1.465l.492-.492a5 5 0 0 0 1.459-3.536c0-1.38-.557-2.629-1.459-3.536zM5.278 11.161L2.306 8.189c-.689-.692-1.116-1.646-1.116-2.7s.426-2.009 1.116-2.7l.492-.491c.692-.689 1.646-1.116 2.7-1.116s2.009.426 2.7 1.116L11.17 5.27zm16.428 10.043l-.492.492c-.692.689-1.646 1.115-2.7 1.115s-2.009-.426-2.701-1.116l-2.972-2.971l5.894-5.894l2.972 2.972c.691.692 1.119 1.648 1.119 2.704s-.428 2.011-1.119 2.704z" />
+                            <path fill="#00E676"
+                                d="M9.261 6.069a.558.558 0 0 0-.394-.958a.56.56 0 1 0 .394.958zM5.286 2.094a.558.558 0 0 0 .394.958a.56.56 0 1 0-.394-.958zm0 6.37a.558.558 0 0 0 .394.958a.56.56 0 1 0-.394-.958zM2.098 5.276a.558.558 0 0 0 .394.958a.56.56 0 1 0-.394-.958zm3.973.8a.558.558 0 0 0-.394-.958a.56.56 0 1 0 .394.958zm15.851 11.86a.558.558 0 0 0-.958.394a.56.56 0 1 0 .958-.394zm-3.983-3.188a.558.558 0 0 0 .394.958a.56.56 0 1 0-.394-.958zm0 6.37a.558.558 0 0 0 .394.958a.56.56 0 1 0-.394-.958zm-3.181-3.182a.558.558 0 0 0 .394.958a.56.56 0 1 0-.394-.958zm3.968.795a.558.558 0 0 0-.394-.958a.56.56 0 1 0 .394.958z" />
+                        </svg>
+                        <div>
+                            <h4 class="text-sm font-semibold text-slate-800">
+                                Recuperación y rendimiento
+                            </h4>
+                            <p class="mt-0.5 text-xs leading-5 text-slate-500">
+                                Describe sus conocimientos y especialización profesional.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </article>
+        </div>
+    </section>
+
+
+    <!--DISCIPLINAS CLAVE-->
+    <section class="mx-auto mt-16 max-w-7xl">
+
+        <!--ENCABEZADO DE LA SECCIÓN -->
+        <div class="mb-8 text-center">
+
+            <p
+                class="text-xs font-semibold uppercase tracking-widest text-emerald-500 rounded-full px-3 py-1 bg-emerald-100 inline-flex">
+                ÁREAS DE ESPECIALIZACIÓN
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                Disciplinas Clave que Domino
+            </h2>
+
+            <p class="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600">
+                Programas diseñados para acompañarte en tus objetivos de entrenamiento
+                con una planificación adaptada a tus necesidades.
+            </p>
+
+        </div>
+
+        <!-- CUADRICULA DE ESPECIALIDADES -->
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+            <!--TARJETA 1 -->
+            <article
+                class="flex flex-col rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                    <span class="text-xl" aria-hidden="true">✦</span>
+                </div>
+
+                <h3 class="mt-4 text-[18px] font-bold text-slate-900">
+                    Hipertrofia Funcional
+                </h3>
+
+                <p class="mt-3 flex-1 text-[13px] leading-6 text-slate-600">
+                    Desarrollo de masa muscular y fuerza mediante ejercicios progresivos,
+                    con atención a la técnica y la ejecución.
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-2 border-t border-slate-100 pt-4">
+                    <span class="text-xs font-bold text-slate-500">Nivel: inicial a avanzado</span>
+                    <span class="text-xs font-bold text-emerald-700">Fuerza y masa</span>
+                </div>
+
+            </article>
+
+            <!--TARJETA 2-->
+            <article
+                class="flex flex-col rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700">
+                    <span class="text-xl" aria-hidden="true">↗</span>
+                </div>
+
+                <h3 class="mt-4 text-[18px] font-bold text-slate-900">
+                    Recomposición Corporal
+                </h3>
+
+                <p class="mt-3 flex-1 text-[13px] leading-6 text-slate-600">
+                    Planificación orientada a mejorar la composición corporal,
+                    combinando entrenamiento, constancia y seguimiento.
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-2 border-t border-slate-100 pt-4">
+                    <span class="text-xs font-bold text-slate-500">Enfoque integral: </span>
+                    <span class="text-xs font-bold text-cyan-700">Progreso sostenible</span>
+                </div>
+
+            </article>
+
+            <!--TARJETA 3-->
+            <article
+                class="flex flex-col rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-100 text-indigo-700">
+                    <span class="text-xl" aria-hidden="true">◆</span>
+                </div>
+
+                <h3 class="mt-4 text-[18px] font-bold text-slate-900">
+                    Fundamentos Powerlifting
+                </h3>
+
+                <p class="mt-3 flex-1 text-[13px] leading-6 text-slate-600">
+                    Práctica técnica y progresión en sentadilla, press de banca
+                    y peso muerto, adaptadas al nivel de cada persona.
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-2 border-t border-slate-100 pt-4">
+                    <span class="text-xs font-bold text-slate-500">Técnica y control: </span>
+                    <span class="text-xs font-bold text-indigo-700">Fuerza máxima</span>
+                </div>
+
+            </article>
+
+            <!--TARJETA 4-->
+            <article
+                class="flex flex-col rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                    <span class="text-xl" aria-hidden="true">↻</span>
+                </div>
+
+                <h3 class="mt-4 text-[18px] font-bold text-slate-900">
+                    Acondicionamiento Metabólico
+                </h3>
+
+                <p class="mt-3 flex-1 text-[13px] leading-6 text-slate-600">
+                    Ejercicios para desarrollar la capacidad física y la resistencia,
+                    con intensidad ajustada a los objetivos personales.
+                </p>
+
+                <div class="mt-5 flex flex-wrap gap-2 border-t border-slate-100 pt-4">
+                    <span class="text-xs font-bold text-slate-500">Resistencia: </span>
+                    <span class="text-xs font-bold text-emerald-700">Capacidad física</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!--CÓMO TRABAJAS CON EMMANUEL -->
+    <section class="mx-auto mt-20 max-w-7xl">
+
+        <!--ENCABEZADO -->
+        <div class="mb-10 text-center">
+
+            <p
+                class="text-xs font-semibold uppercase tracking-widest text-emerald-600 rounded-full px-3 py-1 bg-emerald-100 inline-flex">
+                TU PROCESO DE ENTRENAMIENTO
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                Cómo Trabajas Conmigo
+            </h2>
+
+            <p class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600 md:text-base">
+                Un proceso estructurado para convertir tus objetivos en un plan
+                de entrenamiento y dar seguimiento a tu evolución.
+            </p>
+
+        </div>
+
+        <!-- CUTRO PASOS-->
+        <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+            <!--PASO 1-->
+            <article
+                class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <span class="absolute right-5 top-5 text-3xl font-bold text-emerald-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                        stroke="#10B981" stroke-width="2">
+                        <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                        <rect x="3" y="7" width="18" height="14" rx="2" />
+                        <path d="M12 11v6" />
+                        <path d="M9 14h6" />
+                    </svg>
+                </span>
+
+                <div
+                    class="font-bold flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                    <span class="text-xl" aria-hidden="true">01</span>
+                </div>
+
+                <h3 class="mt-5 text-lg font-bold text-slate-900">
+                    Evaluación inicial
+                </h3>
+
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                    Conversamos sobre tus objetivos, tu experiencia y tus hábitos
+                    para identificar tus necesidades de entrenamiento.
+                </p>
+
+            </article>
+
+            <!--PASO 2-->
+            <article
+                class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <span class="absolute right-5 top-5 text-3xl font-bold text-cyan-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                        stroke="#10B981" stroke-width="2">
+                        <circle cx="12" cy="12" r="9" />
+                        <polyline points="12 7 12 12 15 12" />
+                    </svg>
+                </span>
+
+                <div class="font-bold flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700">
+                    <span class="text-xl" aria-hidden="true">02</span>
+                </div>
+
+                <h3 class="mt-5 text-lg font-bold text-slate-900">
+                    Planificación personalizada
+                </h3>
+
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                    Organizamos una rutina que considere tus objetivos,
+                    tu nivel y el tiempo disponible para entrenar.
+                </p>
+
+            </article>
+
+            <!--PASO 3-->
+            <article
+                class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <span class="absolute right-5 top-5 text-3xl font-bold text-indigo-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                        stroke="#10B981" stroke-width="2">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                </span>
+
+                <div
+                    class="font-bold flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-100 text-indigo-700">
+                    <span class="text-xl" aria-hidden="true">03</span>
+                </div>
+
+                <h3 class="mt-5 text-lg font-bold text-slate-900">
+                    Entrenamiento guiado
+                </h3>
+
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                    Sigue las rutinas, aplica las recomendaciones y registra
+                    tus sesiones para mantener un historial de actividad.
+                </p>
+
+            </article>
+
+            <!--PASO 4-->
+            <article
+                class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <span class="absolute right-5 top-5 text-3xl font-bold text-emerald-100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                        stroke="#10B981" stroke-width="2">
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                </span>
+
+                <div
+                    class="font-bold flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                    <span class="text-xl" aria-hidden="true">04</span>
+                </div>
+
+                <h3 class="mt-5 text-lg font-bold text-slate-900">
+                    Seguimiento y ajustes
+                </h3>
+
+                <p class="mt-3 text-sm leading-6 text-slate-600">
+                    Revisa tus avances y ajusta el programa de acuerdo con
+                    tu evolución y tus nuevos objetivos.
+                </p>
+
+            </article>
+        </div>
+    </section>
+
+
+    <!--ETIQUETA PARA COMENZAR -->
+    <section class="mx-auto mt-20 max-w-7xl">
+        <div class="relative overflow-hidden rounded-3xl bg-slate-900 px-6 py-10 shadow-xl md:px-12 md:py-14">
+
+            <!--ELEMENTO DECORATIVO DEL FONDO-->
+
+            <div class="relative grid grid-cols-1 items-center gap-10 md:grid-cols-2">
+
+                <!-- COLUMNA IZQUIERDA-->
+                <div>
+
+                    <div class="pointer-events-none absolute -bottom-20 -right-20 h-96 w-96 rounded-full opacity-40 blur-3xl"
+                        style="background: radial-gradient(circle, rgba(0,230,118,1) 0%, rgba(0,0,0,0) 70%);">
+                    </div>
+
+                    <span
+                        class="inline-flex rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-emerald-300">
+                        Entrenamiento personalizado
+                    </span>
+
+                    <h2 class="mt-5 text-3xl font-bold leading-tight text-white md:text-5xl">
+                        Lleva tu entrenamiento
+                        <span class="text-emerald-400">al siguiente nivel.</span>
+                    </h2>
+
+                    <p class="mt-5 max-w-xl text-sm leading-7 text-slate-300 md:text-base">
+                        Trabaja con una estrategia adaptada a tus objetivos, con orientación
+                        profesional, seguimiento de tu progreso y ajustes en tu planificación.
+                    </p>
+
+                    <!--LISTA DE BENEFICIOS-->
+                    <div class="mt-7 space-y-4 grid grid-cols-2 sm:grid-cols-2">
+
+                        <li class="flex items-start gap-3 text-sm text-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" stroke="#10B981" stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <polyline points="8.5 12.5 11 15 15.5 9.5" />
+                            </svg>
+                            Plan de entrenamiento personalizado
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" stroke="#10B981" stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <polyline points="8.5 12.5 11 15 15.5 9.5" />
+                            </svg>
+                            Seguimiento de avances y objetivos
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" stroke="#10B981" stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <polyline points="8.5 12.5 11 15 15.5 9.5" />
+                            </svg>
+                            Orientación para mejorar tu técnica
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-slate-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" stroke="#10B981" stroke-width="2">
+                                <circle cx="12" cy="12" r="9" />
+                                <polyline points="8.5 12.5 11 15 15.5 9.5" />
+                            </svg>
+                            Ajustes según tu evolución
+                        </li>
+
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA DERECHA: TARJETA DEL PLAN-->
+                <div class="rounded-2xl border border-slate-700/60 bg-slate-800/80 p-6 shadow-2xl md:p-8">
+
+                    <div class="text-center">
+                        <p class="text-sm font-semibold text-white">
+                            INVERSIÓN MENSUAL
+                        </p>
+                    </div>
+
+                    <div class="text-center itmes-baseline gap-1 mt-3 text-2xl font-bold text-white">
+                        <span class="text-4xl">$1,500</span>
+                        <span class="text-sm"> MXN / MES</span>
+                    </div>
+
+                    <!--PRECIO-->
+                    <div class="mt-3 pb-4">
+                        <p class="text-center mt-2 text-sm font-bold tracking-tight text-emerald-500">
+                            Sin permanencia * Cancela cuando quieras
+                        </p>
+                    </div>
+
+                    <!-- BOTÓN-->
+                    <a href="/planes-precios"
+                        class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-500 px-4 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-emerald-600 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-emerald-500/30 cursor-pointer">
+                        CONOCER PLANES Y PRECIOS
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                    <p class="mt-4 text-center text-xs leading-5 text-slate-500">
+                        Acceso inmediato al contenido y enlace para agendar la llamada inicial.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--PREGUNTAS FRECUENTES-->
+    <section class="mx-auto mt-20 max-w-4xl px-1 pb-16">
+
+        <!-- Encabezado -->
+        <div class="mb-10 text-center">
+            <p
+                class="text-xs font-semibold uppercase tracking-widest text-emerald-600 rounded-full inline-flex px-3 py-2 bg-emerald-100">
+                RESOLVEMOS TUS DUDAS
+            </p>
+
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                Preguntas Frecuentes
+            </h2>
+
+            <p class="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600 md:text-base">
+                Conoce cómo funciona el acompañamiento personalizado y encuentra
+                respuestas a las dudas más comunes antes de comenzar.
+            </p>
+        </div>
+
+        <!--LISTA DE PREGUNTAS-->
+        <div class="space-y-4">
+
+            <!--PREGUNTA 1-->
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 open:border-emerald-200 open:shadow-md">
+
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Cómo funciona el entrenamiento personalizado?
+
+                    <span
+                        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-transform duration-300 group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+                        </svg>
+                    </span>
+                </summary>
+
+                <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-600">
+                    El proceso comienza con la definición de tus objetivos y la revisión
+                    de tu nivel actual. A partir de esa información se organiza una
+                    planificación que puede ajustarse conforme avances.
+                </p>
+
+            </details>
+
+            <!--PREGUNTA 2-->
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 open:border-emerald-200 open:shadow-md">
+
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Necesito experiencia previa en el gimnasio?
+
+                    <span
+                        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-transform duration-300 group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+                        </svg>
+                    </span>
+                </summary>
+
+                <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-600">
+                    No necesariamente. La planificación puede adaptarse a tu experiencia,
+                    condición física y objetivos. Lo importante es comenzar con un nivel
+                    adecuado y progresar de forma gradual.
+                </p>
+
+            </details>
+
+            <!--PREGUNTA 3-->
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 open:border-emerald-200 open:shadow-md">
+
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Cómo se revisa mi progreso?
+
+                    <span
+                        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-transform duration-300 group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+                        </svg>
+                    </span>
+                </summary>
+
+                <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-600">
+                    El progreso puede revisarse mediante tus registros de entrenamiento,
+                    el cumplimiento de tus objetivos y los indicadores acordados al iniciar
+                    el programa. La frecuencia de seguimiento dependerá del plan contratado.
+                </p>
+
+            </details>
+
+            <!--PREGUNTA 4-->
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 open:border-emerald-200 open:shadow-md">
+
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Puedo entrenar si tengo poco tiempo disponible?
+
+                    <span
+                        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-transform duration-300 group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6\" />
+                        </svg>
+                    </span>
+                </summary>
+
+                <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-600">
+                    La disponibilidad de tiempo puede considerarse al organizar tus
+                    sesiones. La duración y la frecuencia se definirán según tus
+                    necesidades y las características del programa.
+                </p>
+
+            </details>
+
+            <!--PREGUNTA 5-->
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 open:border-emerald-200 open:shadow-md">
+
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Cómo puedo contratar un plan?
+
+                    <span
+                        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-transform duration-300 group-open:rotate-180">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6\" />
+                        </svg>
+                    </span>
+                </summary>
+
+                <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-600">
+                    Puedes consultar la sección de planes y precios para revisar las
+                    opciones disponibles y conocer las condiciones de contratación.
+                </p>
+
+            </details>
+
+        </div>
+
+        <!--ENLACE DE CONTACTO-->
+        <div class="mt-8 text-center">
+            <p class="text-sm text-slate-600 font-bold">
+                ¿Todavía tienes dudas?
+            </p>
+
+            <a href="/"
+                class="mt-3 inline-flex items-center justify-center rounded-full border border-emerald-500 px-5 py-3 text-sm font-semibold text-emerald-700 transition-colors hover:bg-emerald-300 cursor-pointer">
+                Contactar al Kinesiólogo
+            </a>
+        </div>
+
+    </section>
+
+</main>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,738 @@
+<app-navbar></app-navbar>
+
+<main class="min-h-screen bg-slate-50 px-6 py-12">
+
+    <!--ENCABEZADO DE LA PÁGINA-->
+    <section class="mx-auto max-w-5xl text-center">
+        <div class="pointer-events-none absolute -left-30 h-100 w-100 rounded-full opacity-40 blur-3xl"
+            style="background: radial-gradient(circle at top left, rgba(0,230,118,1) 0%, rgba(0,0,0,0) 70%);">
+        </div>
+        <div class="text-xs gap-2 px-2 py-2 rounded-full items-center inline-flex bg-slate-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-500">
+            </span>
+            Transparencia deportiva CulturaFit
+        </div>
+
+        <div class="flex justify-center gap-2">
+            <div class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-slate-900">
+                Invierte en tu
+            </div>
+            <div
+                class="underline text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-emerald-500">
+                Rendimiento
+            </div>
+        </div>
+
+        <div class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-slate-900">
+            físico
+        </div>
+
+        <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600 md:text-lg">
+            Elige entre autonomía estructurada o acompañamiento 1 a 1 con un entrenador personal
+            dedicado. Sin permanencias y sin letras pequeñas.
+        </p>
+
+    </section>
+
+    <!--SELECTOR DE PERIODO DE PAGO -->
+    <section class="mt-8 flex flex-col items-center">
+
+        <p class="mb-3 text-sm font-medium text-slate-600">
+            Elige tu periodo de pago
+        </p>
+
+        <div class="inline-flex rounded-full bg-slate-100 p-1">
+
+            <!-- Opción mensual -->
+            <button type="button" (click)="periodo = 'mensual'" [class.bg-emerald-600]="periodo === 'mensual'"
+                [class.text-white]="periodo === 'mensual'" [class.shadow-sm]="periodo === 'mensual'"
+                [class.text-slate-600]="periodo !== 'mensual'"
+                class="rounded-full px-5 py-2 text-sm font-semibold transition-colors"
+                [attr.aria-pressed]="periodo === 'mensual'">
+                Mensual
+            </button>
+
+            <!-- Opción trimestral -->
+            <button type="button" (click)="periodo = 'trimestral'" [class.bg-emerald-600]="periodo === 'trimestral'"
+                [class.text-white]="periodo === 'trimestral'" [class.shadow-sm]="periodo === 'trimestral'"
+                [class.text-slate-600]="periodo !== 'trimestral'"
+                class="rounded-full px-5 py-2 text-sm font-semibold transition-colors"
+                [attr.aria-pressed]="periodo === 'trimestral'">
+                Trimestral
+            </button>
+        </div>
+    </section>
+
+    <!--TARJETAS DE PRECIOS -->
+    <section class="mx-auto w-full mt-12 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+
+        <!--TARJETA PLAN BASICO-->
+        <article class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+
+            <div class="flex justify-between items-center">
+                <span class="rounded-full bg-indigo-50 inline-flex text-[12px] text-slate-950 px-2 py-1 uppercase">
+                    nivel autonomia
+                </span>
+                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 10h2v4H2zm20 0h2v4h-2zM4 8h3v8H4zm13 0h3v8h-3zM7 11h10v2H7z"></path>
+                </svg>
+            </div>
+
+
+            <h2 class="text-3xl font-bold mt-1 text-slate-900">
+                Plan Básico
+            </h2>
+
+            <p class=" mt-2 text-sm text-slate-500">
+                Ideal para atletas autodidactas con disciplina, que buscan rutinas cientificamente
+                estructuradas y registro técnico.
+            </p>
+
+            <!--PRECIO-->
+
+            <div class="mt-3 flex items-baseline gap-1">
+                <span class="text-4xl font-bold text-slate-900">
+                    {{ periodo === 'mensual' ? '$1,000' : '$1,500' }}
+                </span>
+                <span class="text-sm text-slate-500 ">MXN / MES</span>
+            </div>
+
+            <p class="mt-5 text-xs text-slate-500 uppercase font-bold">
+                Incluye:
+            </p>
+
+            <!-- Beneficios del plan -->
+            <ul class="space-y-4">
+
+                <li class="mt-3 flex items-start gap-3 text-sm text-slate-600">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                        </path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    Rutinas de entrenamiento
+                </li>
+
+                <li class="flex items-start gap-3 text-sm text-slate-600">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                        </path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    Seguimiento básico del progreso
+                </li>
+
+                <li class="flex items-start gap-3 text-sm text-slate-600">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                        </path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                    </svg>
+                    Acceso a ejercicios
+                </li>
+            </ul>
+
+            <p class="mt-5 text-xs text-slate-500 uppercase font-bold">
+                No incluye:
+            </p>
+
+            <ul class="space-y-4">
+
+                <li class="mt-3 flex items-start gap-3 text-sm text-slate-600">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m16.5 7.5-9 9"></path>
+                        <path d="m7.5 7.5 9 9"></path>
+                    </svg>
+                    Rutinas de entrenamiento
+                </li>
+
+                <li class="flex items-start gap-3 text-sm text-slate-600">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m16.5 7.5-9 9"></path>
+                        <path d="m7.5 7.5 9 9"></path>
+                    </svg>
+                    Seguimiento básico del progreso
+                </li>
+
+                <li class="flex items-start gap-3 text-sm text-slate-600">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="m16.5 7.5-9 9"></path>
+                        <path d="m7.5 7.5 9 9"></path>
+                    </svg>
+                    Acceso a ejercicios
+                </li>
+            </ul>
+
+            <!-- Botón -->
+            <button type="button"
+                class="mt-8 w-full rounded-full border border-slate-300 px-6 py-3 font-semibold bg-slate-800 text-white transition-colors hover:bg-slate-600">
+                Comenzar con Plan Básico
+            </button>
+        </article>
+
+        <!-- Tarjeta del Plan Plus -->
+        <article class="relative overflow-hidden rounded-2xl border-2 border-emerald-500 bg-[#0B192C] p-8 shadow-lg">
+            <div class="pointer-events-none absolute -bottom-20 -right-20 h-96 w-96 rounded-full opacity-40 blur-3xl"
+                style="background: radial-gradient(circle, rgba(0,230,118,1) 0%, rgba(0,0,0,0) 70%);">
+            </div>
+
+            <div class="relative z-10">
+                <span class="flex justify-between">
+                    <span class="text-[12px] inline-flex items-center rounded-full bg-emerald-300 px-2 py-1 gap-1">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2">
+                            <path
+                                d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                            </path>
+                            <polyline points="9 12 11 14 15 10"></polyline>
+                        </svg>
+                        Mas popular- %100 personalizado
+                    </span>
+                    <span>
+                        <span
+                            class="text-[12px] rounded-full inline-flex items-center gap-1 px-2 py-1 bg-slate-800 text-emerald-500">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500">
+                            </span>
+                            Plazas limitadas-Disponibles
+                        </span>
+                    </span>
+                </span>
+
+                <div class="flex items-center gap-2">
+                    <h2 class="mt-2 text-3xl font-bold text-white tracking-tight">
+                        Plan Plus
+                    </h2>
+                    <span
+                        class="font-bold mt-2 rounded-full bg-[#22b8cf] text-[#052c38] px-2.5 py-0.5 text-[10px] uppercase tracking-wide">
+                        COACH ASIGNADO
+                    </span>
+                </div>
+
+                <p class="mt-2 text-sm text-indigo-100">
+                    Para quienes exigen una transformación acelerada y sin estancamientos, guiados
+                    por un entrenador que analiza cada levantamiento y variable metabolica.
+                </p>
+
+                <!-- Precio -->
+                <div class="mt-3 flex items-baseline gap-1">
+                    <span class="text-4xl font-bold text-emerald-500">
+                        {{ periodo === 'mensual' ? '$3,700' : '$5,000' }}
+                    </span>
+                    <span class="text-sm text-indigo-200">MXN / MES</span>
+                </div>
+
+                <p class="mt-5 text-xs text-emerald-500 uppercase font-bold">
+                    todo lo del plan básico, adicional:
+                </p>
+
+                <!-- Beneficios del plan -->
+                <div class="mt-1 space-y-4 grid grid-cols-2 lg:grid-cols-2 gap-4">
+                    <ul class="mt-3 space-y-4">
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676"
+                                stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <polygon points="12,16 7,10 10,10 10,7 14,7 14,10 17,10" fill="#00E676" stroke="none">
+                                </polygon>
+                            </svg>
+                            Todo lo incluido en el Plan Básico
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676"
+                                stroke-width="2">
+                                <rect x="2" y="5" width="13" height="14" rx="2"></rect>
+                                <polygon points="15 10 22 6 22 18 15 14"></polygon>
+                                <circle cx="8.5" cy="10" r="2" fill="#00E676" stroke="none"></circle>
+                                <path d="M5.5 16c0-1.7 1.3-3 3-3s3 1.3 3 3" fill="#00E676" stroke="none"></path>
+                            </svg>
+                            Entrenamiento personalizado
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676"
+                                stroke-width="2">
+                                <path d="M6 2v6a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V2"></path>
+                                <path d="M8 10v12"></path>
+                                <path d="M16 2v20"></path>
+                                <path d="M16 2c3 0 4 3 4 7v3h-4"></path>
+                            </svg>
+                            Seguimiento avanzado del progreso
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676"
+                                stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Recomendaciones adaptadas a tus objetivos
+                        </li>
+                    </ul>
+
+                    <!--SEPARACIÓN DE COLUMNAS-->
+
+                    <ul class="mt-2.5 space-y-4">
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676"
+                                stroke-width="2">
+                                <path
+                                    d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                                </path>
+                                <circle cx="12" cy="13" r="4"></circle>
+                            </svg>
+                            Todo lo incluido en el Plan Básico
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676"
+                                stroke-width="2">
+                                <rect x="2" y="5" width="13" height="14" rx="2"></rect>
+                                <polygon points="15 10 22 6 22 18 15 14"></polygon>
+                                <circle cx="8.5" cy="10" r="2" fill="#00E676" stroke="none"></circle>
+                                <path d="M5.5 16c0-1.7 1.3-3 3-3s3 1.3 3 3" fill="#00E676" stroke="none"></path>
+                            </svg>
+                            Entrenamiento personalizado
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676"
+                                stroke-width="2">
+                                <path d="M6 2v6a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V2"></path>
+                                <path d="M8 10v12"></path>
+                                <path d="M16 2v20"></path>
+                                <path d="M16 2c3 0 4 3 4 7v3h-4"></path>
+                            </svg>
+                            Seguimiento avanzado del progreso
+                        </li>
+
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E676"
+                                stroke-width="2">
+                                <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                </path>
+                            </svg>
+                            Recomendaciones adaptadas a tus objetivos
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Botón -->
+                <button type="button"
+                    class="mt-8 w-full rounded-full bg-emerald-500 px-6 py-3 font-semibold text-white transition-colors hover:bg-emerald-700">
+                    Elegir Plus
+                </button>
+            </div>
+        </article>
+    </section>
+
+    <!--TABLA COMPARATIVA DE PLANES-->
+    <section class="mx-auto mt-20 max-w-5xl px-2">
+
+        <!-- Encabezado -->
+        <div class="mb-8 text-center">
+
+            <span
+                class="rounded-full inline-flex items-center bg-emerald-100 px-3 py-2 font-semibold tracking-wider text-emerald-700">
+                Matriz técnica
+            </span>
+
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                Compara Nuestros Planes
+            </h2>
+
+            <p class="mx-auto mt-3 max-w-2xl text-slate-600">
+                Descubre qué incluye cada plan y elige el que mejor se adapte a ti.
+            </p>
+        </div>
+
+        <!-- Contenedor de la tabla -->
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+
+            <table class="w-full min-w-520px border-collapse text-left">
+
+                <!-- Encabezados de columnas -->
+                <thead class="bg-slate-100">
+
+                    <tr>
+                        <th class="px-6 py-4 text-sm font-semibold text-slate-700">
+                            Características
+                        </th>
+                        <th class="px-6 py-4 text-center text-sm font-semibold text-slate-700">
+                            Plan Básico
+                        </th>
+                        <th class="bg-emerald-100 px-6 py-4 text-center text-sm font-semibold text-emerald-700">
+                            Plan Plus Personalizado
+                        </th>
+                    </tr>
+                </thead>
+
+                <!-- Contenido de la tabla -->
+                <tbody class="divide-y divide-slate-200">
+                    <tr class="hover:bg-slate-50">
+                        <td class="px-6 py-4 text-sm text-slate-700 font-semibold">
+                            Rutinas de entrenamiento
+                        </td>
+
+                        <td class="px-6 py-4 text-center font-bold text-emerald-600">
+                            ✓
+                        </td>
+                        <td class="px-6 py-4 font-bold text-emerald-600 flex justify-center items-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                                </path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50">
+                        <td class="px-6 py-4 text-sm text-slate-700 font-semibold">
+                            Seguimiento del progreso
+                        </td>
+                        <td class="px-6 py-4 text-center font-bold text-emerald-600">
+                            ✓
+                        </td>
+                        <td class="px-6 py-4 font-bold text-emerald-600 flex justify-center items-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                                </path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50">
+                        <td class="px-6 py-4 text-sm text-slate-700 font-semibold">
+                            Entrenador personalizado
+                        </td>
+                        <td class="px-6 py-4 text-center text-slate-400">
+                            —
+                        </td>
+                        <td class="px-6 py-4 font-bold text-emerald-600 flex justify-center items-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                                </path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50">
+                        <td class="px-6 py-4 text-sm text-slate-700 font-semibold">
+                            Recomendaciones avanzadas
+                        </td>
+                        <td class="px-6 py-4 text-center text-slate-400">
+                            —
+                        </td>
+                        <td class="px-6 py-4 font-bold text-emerald-600 flex justify-center items-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                                </path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="px-6 py-4 text-sm text-slate-700 font-semibold">
+                            Entrenador personalizado
+                        </td>
+                        <td class="px-6 py-4 text-center text-slate-400">
+                            —
+                        </td>
+                        <td class="px-6 py-4 font-bold text-emerald-600 flex justify-center items-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                                </path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="px-6 py-4 text-sm text-slate-700 font-semibold">
+                            Entrenador personalizado
+                        </td>
+                        <td class="px-6 py-4 text-center text-slate-400">
+                            —
+                        </td>
+                        <td class="px-6 py-4 font-bold text-emerald-600 flex justify-center items-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                                </path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50">
+                        <td class="px-6 py-4 text-sm text-slate-700 font-semibold">
+                            Entrenador personalizado
+                        </td>
+                        <td class="px-6 py-4 text-center text-slate-400">
+                            —
+                        </td>
+                        <td class="px-6 py-4 font-bold text-emerald-600 flex justify-center items-center">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2l2.4 2.4L18 4l.4 3.4 3.4.4-1.6 3.2 1.6 3.2-3.4.4-.4 3.4-3.6-.4-2.4 2.4-2.4-2.4-3.6.4-.4-3.4-3.4-.4 1.6-3.2-1.6-3.2 3.4-.4.4-3.4 3.6.4z">
+                                </path>
+                                <polyline points="9 12 11 14 15 10"></polyline>
+                            </svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA EL PLAN PLUS -->
+    <section class="bg-indigo-50 rounded-2xl mt-5 px-3 py-3">
+        <div class="mx-auto max-w-5xl">
+
+            <!-- Encabezado -->
+            <div class="mx-auto mb-12 max-w-2xl text-center">
+                <p
+                    class="inline-block rounded-full bg-emerald-100 px-3 py-2 text-sm uppercase font-semibold tracking-widest text-emerald-600">
+                    DESCUBRE EL PLAN PLUS
+                </p>
+
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                    Como Funciona el Plan Plus
+                </h2>
+
+                <p class="mt-4 text-base leading-7 text-slate-600">
+                    Del registro a tu primera sesión en menos de 24 horas.
+                </p>
+            </div>
+
+            <!-- Pasos -->
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+
+                <!-- Paso 1 -->
+                <article
+                    class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-lg font-bold text-emerald-700">
+                        01
+                    </div>
+
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">
+                        Define Tus Objetivos
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600 text-[15px]">
+                        Establece qué quieres conseguir y cuáles son tus prioridades
+                        para orientar tu entrenamiento.
+                    </p>
+                </article>
+
+                <!-- Paso 2 -->
+                <article
+                    class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-lg font-bold text-emerald-700">
+                        02
+                    </div>
+
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">
+                        Sigue Tu Plan Personalizado
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600 text-[15px]">
+                        Consulta tus rutinas y utiliza las recomendaciones disponibles
+                        para organizar tus sesiones de entrenamiento.
+                    </p>
+                </article>
+
+                <!-- Paso 3 -->
+                <article
+                    class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-lg font-bold text-emerald-700">
+                        03
+                    </div>
+
+                    <h3 class="mt-5 text-xl font-bold text-slate-900">
+                        Revisa Tu Progreso
+                    </h3>
+
+                    <p class="mt-3 text-sm leading-6 text-slate-600 text-[15px]">
+                        Da seguimiento a tus avances y ajusta tus objetivos conforme
+                        evoluciona tu entrenamiento.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!--TARJETA DE GARANTIA-->
+    <section class="relative overflow-hidden bg-[#0B192C] text-white rounded-2xl shadow-xl mt-5 p-8">
+        <div class="pointer-events-none absolute -bottom-20 -right-20 h-96 w-96 rounded-full opacity-40 blur-3xl"
+            style="background: radial-gradient(circle, rgba(0,230,118,1) 0%, rgba(0,0,0,0) 70%);">
+        </div>
+
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+
+            <!-- LADO IZQUIERDO: ICONO Y TEXTO PRINCIPAL -->
+            <div class="flex items-start gap-5 max-w-3xl">
+                <!-- COLUMNA 1: ICONO -->
+                <div class=" pt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="60" height="60">
+                        <!-- Círculo de fondo verde oscuro -->
+                        <circle cx="100" cy="100" r="85" fill="#155e54" opacity="0.85" />
+
+                        <!-- Escudo -->
+                        <path d="M 100 75 
+                           C 114 82, 124 82, 124 82 
+                           C 124 106, 115 121, 100 128 
+                           C 85 121, 76 106, 76 82 
+                           C 76 82, 86 82, 100 75 Z" fill="none" stroke="#34d399" stroke-width="6"
+                            stroke-linecap="round" stroke-linejoin="round" />
+
+                        <!-- Palomita (Checkmark) -->
+                        <path d="M 87 102 
+                           L 95 110 
+                           L 113 93" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+
+                <!-- COLUMNA 2: TEXTOS -->
+                <div class="space-y-1">
+                    <span class="text-emerald-500 font-bold tracking-wider uppercase text-xs block">
+                        riesgo cero absoluto
+                    </span>
+
+                    <h2 class="text-white font-bold tracking-tight text-2xl md:text-3xl">
+                        Garantia de satisfacción total por 30 días.
+                    </h2>
+
+                    <p class="text-slate-400 text-sm leading-relaxed text-justify">
+                        Prueba CulturaFit en su totalidad. Entrena con tu coach, envia tus videos, y recibe ajustes.
+                        Si durante los primeros 30 días no sientes que el programa ha elevado tu condición y técnia, te
+                        reembolsamos el 100% de tu dinero con un solo click.
+                    </p>
+                </div>
+            </div>
+
+            <!-- LADO DERECHO: COLUMNA 3 (MÉTRICA) -->
+            <div class="text-center md:text-right md:pl-6">
+                <span class="text-emerald-400 font-bold text-4xl block">
+                    100%
+                </span>
+                <p class="text-slate-400 text-xs font-semibold uppercase tracking-wider mt-1">
+                    Seguridad total.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--PREGUNTAS FRECUENTES -->
+    <section class="mx-auto mt-20 max-w-3xl">
+
+        <div class="mb-8 text-center">
+            <p
+                class="bg-emerald-100 inline-flex rounded-full px-3 py-1 mb-3 text-sm font-semibold uppercase tracking-widest text-emerald-600">
+                PREGUNTAS FRECUENTES
+            </p>
+
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+                ¿Tienes alguna duda?
+            </h2>
+
+            <p class="mt-3 text-slate-600">
+                Aquí encontrarás respuestas sobre nuestros planes.
+            </p>
+        </div>
+
+        <div class="space-y-4">
+
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 open:border-emerald-200 open:shadow-md">
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Cuál es la diferencia entre el plan Básico y el Plus?
+                    <span class="text-xl text-emerald-600 transition-transform group-open:rotate-45">+</span>
+                </summary>
+
+                <p class="mt-4 text-sm leading-6 text-slate-600">
+                    El plan Básico incluye herramientas esenciales de entrenamiento
+                    y seguimiento. El plan Plus agrega entrenamiento personalizado
+                    y recomendaciones avanzadas.
+                </p>
+            </details>
+
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 open:border-emerald-200 open:shadow-md">
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Puedo cambiar de plan más adelante?
+                    <span class="text-xl text-emerald-600 transition-transform group-open:rotate-45">+</span>
+                </summary>
+
+                <p class="mt-4 text-sm leading-6 text-slate-600">
+                    La posibilidad de cambiar de plan dependerá de las condiciones
+                    de suscripción que definas para PulseFit.
+                </p>
+            </details>
+
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 open:border-emerald-200 open:shadow-md">
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Qué sucede si elijo el pago anual?
+                    <span class="text-xl text-emerald-600 transition-transform group-open:rotate-45">+</span>
+                </summary>
+
+                <p class="mt-4 text-sm leading-6 text-slate-600">
+                    El precio mensual mostrado representa el equivalente mensual
+                    del pago anual. El importe anual se cobra por adelantado.
+                </p>
+            </details>
+
+            <details
+                class="group rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 open:border-emerald-200 open:shadow-md">
+                <summary
+                    class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-slate-800">
+                    ¿Cómo puedo comenzar a entrenar?
+                    <span class="text-xl text-emerald-600 transition-transform group-open:rotate-45">+</span>
+                </summary>
+
+                <p class="mt-4 text-sm leading-6 text-slate-600">
+                    Elige el plan que mejor se adapte a tus objetivos y sigue
+                    las instrucciones que se habiliten para completar tu registro.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+</main>
+
+<app-footer></app-footer>
